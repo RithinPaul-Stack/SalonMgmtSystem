@@ -1,0 +1,99 @@
+::ng-deep .mat-tab-label-active {
+    font-weight: bolder;
+    color: green !important;
+    font-style: calibri;
+    height: 33px;
+    font-size: 15px !important;
+  }
+  
+  ::ng-deep .mat-tab-label-content {
+    font-size: 15px !important;
+    font-style: calibri;
+    font-weight: bolder;
+  }
+  
+  mat-tab-group {
+    padding: 10px;
+    font-size: 25px !important;
+    background-position-y: fixed;
+    font-style: calibri;
+  }
+  
+  /* ink bar */
+  
+  ::ng-deep .mat-ink-bar {
+    background-color: var(--primary-color, #43A37E) !important;
+    height: 5px!important;
+  }
+  
+  .field-group {
+    display: flex;
+    /*  */
+    justify-content: space-around;
+    /*  */
+    align-items: center;
+    font-size: 15px;
+    font-family: calibri;
+    color:#ffffff;
+  }
+  
+  .width-150 {
+    width: 150px;
+  }
+  
+  .width-250 {
+    width: 100px;
+  }
+  
+  .mat-radio-button {
+    font-size: 15px;
+    padding: 13px 0px 0px 19px;
+  }
+  
+  .time {
+    margin: 42px 0px 44px 0px;
+    font-size: 15px;
+    font-weight: bolder;
+  }
+  
+  mat-checkbox ::ng-deep .mat-checkbox-inner-container {
+    width: 32px;
+    height: 32px;
+  }
+  
+  mat-checkbox {
+    padding: 15px 0px 0px 43px;
+  }
+  
+  input[type=time] {
+    width: 232px;
+    height: 59px;
+    font-size: 35px;
+    border-radius: 10px;
+    margin-top: 13px;
+  }
+  
+  @keyframes spinner {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .spinner:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    border-top-color: #000000;
+    animation: spinner .8s linear infinite;
+  }
+  .label{
+      color: #ffffff;
+  }

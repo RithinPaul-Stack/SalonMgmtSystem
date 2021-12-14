@@ -1,0 +1,24 @@
+
+<div mat-dialog-title>
+    <div class="material-icons" (click)="onNoClick()" style="cursor: pointer;color: black;">close</div>
+</div>
+  
+  <section mat-dialog-content>
+    <h1>Select Time</h1>
+    <input  type="checkbox" [(ngModel)]="local_data.isopen">Opened
+  
+    <div class="field-group without_ampm">
+      <input class="without_ampm" class="form-control" matinput type="time" [(ngModel)]="local_data.opening_time_morning" >
+      <input matinput type="time" class="form-control" [(ngModel)]="local_data.closing_time_morning" >
+    </div>
+  
+    <div class="field-group">
+      <input matinput type="time" class="form-control" [(ngModel)]="local_data.opening_time_evening">
+      <input matinput type="time"  class="form-control"[(ngModel)]="local_data.closing_time_evening">
+    </div>
+  
+    <div class="group">
+      <button style="cursor: pointer;" mat-raised-button (click)="closeDialog()">Cancel</button>
+      <button style="cursor: pointer;" mat-raised-button (click)="doAction()">Save</button>
+    </div>
+  </section>

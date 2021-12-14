@@ -1,0 +1,50 @@
+<!-- <p style="color: white;">orders works!</p> -->
+<!-- <p style="color: white;">stores works!</p> -->
+<div>
+      <ngx-spinner type="ball-spin-fade-rotating" size="medium"></ngx-spinner>
+    <div style="align-content: space-between;">
+        <div id="HASH">
+            <div class="title">View Appointmnets</div>
+        </div>
+    </div>
+    <div style="padding-top: 30px;">
+        <table style="width: 70vw; min-width: 650px;">
+            <tr class="last" style="text-align: left;">
+                <th scope="col" style="text-align: left;">saloon Name</th>
+                <th scope="col">Date Of Appointmnet</th>
+                <th scope="col">Time Slots</th>
+                <th>Review</th>
+                </tr>
+            <ng-container *ngFor='let list of appointments' >
+                <tr>
+                    <td>{{list.salesowner.name}}</td>
+                    <td>{{list.date}}</td>
+                    <td>{{list.time}}</td>
+                    <td style="width: 5vw;">
+                                <div>
+                                    <button style="background-color: lightgreen;border: none;"(click)="addSpecialization('add')">review</button>
+                                    <!-- <div class="material-icons" style=" cursor: pointer; float: right ;color: #46be8a;">
+                                        edit
+                                    </div> -->
+                                </div>
+                            </td>
+                            <td style="width: 20px;">
+                                <div>
+                                    <div class="material-icons" style=" cursor: pointer; float: right ;color: #dd0934;">
+                                        delete
+                                    </div>
+                                </div>
+                            </td>
+                        <!-- </tr> -->
+                    <!-- </td> -->
+                </tr>
+                            </ng-container>
+        </table>
+    </div>
+    <!-- <div style="text-align: right; bottom: 30px; right: 20px;color: white;">
+        <pagination-controls class="current" previousLabel="<" nextLabel=">" screenReaderPaginationLabel="Pagination" screenReaderPageLabel="page" screenReaderCurrentLabel="You're on page" (pageChange)="currentPage = $event">
+        </pagination-controls>
+    </div> -->
+    
+</div>
+

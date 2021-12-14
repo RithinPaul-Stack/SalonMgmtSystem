@@ -1,0 +1,98 @@
+<p>signup1 works!</p>
+<p style="color: white;">working</p>
+<div  style="padding-left: 15vw;color: white;">
+    <!-- <ngx-spinner type="ball-spin-fade-rotating" size="medium" ></ngx-spinner> -->
+    <div class="header">
+      <div>
+        SignUp
+      </div>
+      <div class="Line-1">
+      </div>
+    </div>
+    <form>
+      <div>
+        <div >
+          <div style="float: left">
+            <div style="text-align: left;">
+              <div style="float: left;">
+                <label>Role</label>
+              </div>
+              </div>
+            <div>
+                <input  type="text"  placeholder="Type Here...">
+              </div>
+          </div>
+  
+          <div style="float: left;margin-left: 9vw;margin-right: 12vw;">
+            <div style="text-align: left;">
+              <div style="float: left;">
+                <label>Name</label>
+              </div>
+             </div>
+            <span >
+              <input  type="text"  placeholder="Type Here...">
+            </span>
+          </div>
+        </div>
+        <!-- hh -->
+        <div>
+            <div style="float: left">
+              <div style="text-align: left;">
+                <div style="float: left;">
+                  <label>Email</label>
+                </div>
+                </div>
+              <div>
+                  <input  type="text"  placeholder="Type Here...">
+                </div>
+            </div>
+    
+            <div style="float: left;margin-left: 9vw;;margin-right: 12vw;">
+              <div style="text-align: left;">
+                <div style="float: left;">
+                  <label>password</label>
+                </div>
+               </div>
+              <span >
+                <input  type="text"  placeholder="Type Here...">
+              </span>
+            </div>
+          </div>
+<!-- dialoge -->
+          <div>
+              <label class="label">Store Timings</label>
+
+              <div *ngFor="let x of days" class="field-group" >
+                <p class="width-250">{{x.day | titlecase}}</p>
+                <p class="width-150" *ngIf="x.isopen==false">Close</p>
+                <p class="width-150" *ngIf="x.isopen==true">
+                  {{x.opening_time_morning}}--{{x.closing_time_morning}}<br>{{x.opening_time_evening}}--{{x.closing_time_evening}}
+                </p>
+                <!-- <mat-icon (click)="openDialog('Update',x)" style="cursor: pointer;">create</mat-icon> -->
+              </div>
+            
+          </div>
+<!-- end dialog      -->
+  
+        
+      </div>
+      <div style="text-align: center;">
+        <span>
+          <div>
+            <Button type="submit" class="addBtn"
+              style="cursor: pointer; width: 9vw;  height: 50px; min-width:80px;min-height: 40px;margin-right: 2vw; background-color: #ea7c69; color: white;border: none;border-radius: 5px;">
+              Add
+            </Button>
+            
+            <Button class="cancelBtn"
+              style="cursor: pointer;width: 9vw; min-width:80px; min-height: 40px;  height: 50px; margin-top: 40px;  margin-left: 2vw;border: solid 0.5px #ea7c69;border-radius: 5px; background-color: transparent; color:#ea7c69 ;"
+              (click)="cancel()">
+              Cancel
+            </Button>
+          </div>
+        </span>
+      </div>
+    </form>
+  </div>
+  
+

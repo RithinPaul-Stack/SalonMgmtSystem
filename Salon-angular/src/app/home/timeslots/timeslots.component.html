@@ -1,0 +1,19 @@
+<!-- <p style="color: white;">timeslots works!</p> -->
+<!-- dialog -->
+<div style="margin-top: 10vh;">
+  <label class="label">Store Timings</label>
+
+  <div *ngFor="let x of days" class="field-group" >
+    <p class="width-250">{{x.day | titlecase}}</p>
+    <!-- <p class="width-150" *ngIf="x.isopen==false">Close</p> -->
+    <p class="width-150">
+      10:00--02:00
+      <!-- {{x.opening_time_morning}}--{{x.closing_time_morning}}<br>{{x.opening_time_evening}}--{{x.closing_time_evening}} -->
+    </p>
+    <!-- <div class="material-icons"style=" cursor: pointer; float: right ;color: #46be8a;">
+      edit
+  </div> -->
+    <!-- <mat-icon (click)="openDialog('Update',x)" style="cursor: pointer;">create</mat-icon> -->
+  </div>
+</div>
+<!-- end dialog -->

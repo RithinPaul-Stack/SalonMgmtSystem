@@ -1,0 +1,113 @@
+<!-- <p style="color: transparent;">home works!</p> -->
+<div style="text-align: center;">
+    <div class="profile element" style=" margin: 2vh 6vw 2vh 0px;  height: 60px; ">
+        <div class=" dropdown" style="cursor: pointer; color:#ea7c69 ;float: right;">
+            <img src="assets/profilelogo2x.png" width="64" height="40" style="float: left;">
+            <div style="margin-top: 5vh;" class="dropdown-content">
+                <span class="profileName">
+                    
+                </span>
+                <span class="profileName" style="font-size: 10px;">
+            
+                </span>
+                <a style="cursor: pointer;" (click)="logout()" >
+                    Logout
+                </a>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="innerWidth == 'sm' || innerWidth == 'xs'" style="z-index: 1; top: 30px; margin-left: 10px; position: fixed ;" (click)="openSideNav()">
+        <span class="material-icons" style="font-size: 45px; color:#ea7c69 ;cursor: pointer;">
+            menu
+        </span>
+    </div>
+    <div>
+        <div class="leftNav" id="leftNav" style="float: left; position: absolute;">
+            <div *ngIf="showLeftNav">
+                <div *ngIf='selectedButton == "dashboard";else n_dashboard' style="z-index: 1; margin-left: 7px;">
+                    <span>
+                        <button class="navButton" style="background-color: #ea7c69; margin-top: 30px; cursor: pointer;">
+                            <!-- <img src="assets/s-dashboard@2x.png" style="height: 30px; width: 30px;" alt="Dashboard"> -->
+                            <span class="animate" style="margin-left: 0px;color: #ea7c69; margin-top: 7px;">
+                                Dashboard
+                            </span>
+                    </button>
+                    </span>
+                </div>
+                <ng-template #n_dashboard>
+                    <div (click)="changeButtonFocus('dashboard')">
+                        <button class="navButton" style="background-color: transparent; cursor: pointer; margin-top: 27px;" (click)="changeButtonFocus('dashboard')">
+                            <!-- <img src="assets/n-dashboard@2x.png" style="height: 40px; width: 40px;" alt="Dashboard"> -->
+                            <span class="animate" style="margin-left: 5px;cursor: pointer;margin-top: 10px;">
+                                Dashboard
+                            </span>
+                        </button>
+                    </div>
+                </ng-template>
+
+                <div *ngIf='selectedButton == "reviews";else n_reviews'>
+                    <button class="navButton" style="background-color: #ea7c69; cursor: pointer;">
+                        <!-- <img src="assets/s-inventory@2x.png" style="height: 30px; width: 30px;" alt="reviews"> -->
+                        <span class="animate" style="margin-left: 0px;color: #ea7c69;margin-top: 8px;">
+                            reviews
+                        </span>
+                    </button>
+                </div>
+                <ng-template #n_reviews>
+                    <div>
+                        <span>
+                            <button class="navButton" style="background-color: transparent; cursor: pointer;"
+                                (click)="changeButtonFocus('reviews')">
+                                <!-- <img src="assets/n-inventory@2x.png" style="height: 40px; width: 40px;" alt="reviews"> -->
+                                <span class="animate" style="margin-left: 0px;cursor: pointer;margin-top: 13px;">
+                                    reviews
+                                </span>
+                        </button>
+                        </span>
+                    </div>
+                </ng-template>
+
+                <div *ngIf='selectedButton == "timeslots";else n_timeslots'>
+                    <button class="navButton" style="background-color: #ea7c69; cursor: pointer;">
+                        <!-- <img src="assets/s-expenses@2x.png" style="height: 30px; width: 30px;" alt="Time slots"> -->
+                        <span class="animate" style="margin-left: 0px;color: #ea7c69;margin-top: 8px;">
+                            Time slots
+                        </span>
+                    </button>
+                </div>
+                <ng-template #n_timeslots>
+                    <div>
+                        <button class="navButton" style="background-color: transparent; cursor: pointer;" (click)="changeButtonFocus('timeslots')">
+                            <!-- <img src="assets/n-expenses@2x.png" style="height: 40px; width: 40px;" alt="Time slots"> -->
+                            <span class="animate" style="margin-left: 0px;cursor: pointer; margin-top: 13px;">
+                                Time slots
+                            </span>
+                        </button>
+                    </div>
+                </ng-template>
+
+                <div *ngIf='selectedButton == "customerlist";else n_customerlist'>
+                    <button class="navButton" style="background-color: #ea7c69; cursor: pointer;">
+                        <!-- <img src="assets/s-orderHistory@2x.png" style="height: 30px; width: 30px;" alt="history"> -->
+                        <span class="animate" style="margin-left: 0px; color: #ea7c69;margin-top: 8px;">
+                        Customer history
+                        </span>
+                    </button>
+                </div>
+                <ng-template #n_customerlist>
+                    <div>
+                        <button class="navButton" style="background-color: transparent; cursor: pointer;" (click)="changeButtonFocus('customerlist')">
+                            <!-- <img src="assets/n-orderHistory@2x.png" style="height: 40px; width: 40px;" alt="history"> -->
+                            <span class="animate" style="margin-left: -5px;cursor: pointer;margin-top: 13px;">
+                            Customer history
+                            </span>
+                        </button>
+                    </div>
+                </ng-template>
+
+            </div>
+        </div>
+      
+<div class="childBox" style="margin-left: 120px; z-index: -1;">
+    <router-outlet></router-outlet>
+</div>

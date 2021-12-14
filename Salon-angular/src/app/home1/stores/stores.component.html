@@ -1,0 +1,36 @@
+<div style="color: white;" >
+  <form [formGroup]="timeForm">
+<!--======================================================================== first box =====================-->
+<div class="countBox" style="float: left;"*ngFor="let store of stores">
+  <div value="store.name" >
+    <p   style="font-weight: bolder;font-size: large;">{{store.name}}</p>
+  </div>
+  <div >
+      <!-- <input type="checkbox"  name="{{store._id}}" #storeId [value]="store._id" formControlName="salesowner" > -->
+      <button (click)="saveStoreID(store._id)">Select</button>
+    </div>
+<div style="font-size: small;" >
+    <label class="label">Store Timings</label>
+
+    <div class="field-group"  >
+      <input class="width-250" type="date" formControlName="date">
+      <input class="width-150" type="time" formControlName="time">
+     </div>
+     
+  </div>
+</div>
+
+<div style="float: left;margin-left: 30vw;">
+  <Button   class="addBtn"  (click)="addTimeForm()" action="add"
+    style="cursor: pointer; width: 9vw;  height: 50px; min-width:80px;min-height: 40px;margin-right: 2vw; background-color: #ea7c69; color: white;border: none;border-radius: 5px;">
+    choose appointment
+  </Button>
+  
+  <Button class="cancelBtn"
+    style="cursor: pointer;width: 9vw; min-width:80px; min-height: 40px;  height: 50px; margin-top: 40px;  margin-left: 2vw;border: solid 0.5px #ea7c69;border-radius: 5px; background-color: transparent; color:#ea7c69 ;"
+    (click)="onReset()">
+    Reset
+  </Button>
+</div>
+</form>
+</div>

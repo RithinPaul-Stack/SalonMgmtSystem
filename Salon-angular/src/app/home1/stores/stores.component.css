@@ -1,0 +1,232 @@
+.select {
+    width: 100%;
+    padding: 0px 0px;
+    margin-left: 3vw;
+    display: block;
+    border-radius: 5px;
+    border: solid 0.5px #707070;
+    box-sizing: border-box;
+    background-color: none;
+    min-width: 50px;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+store.select {
+    margin-right: 10px;
+}
+
+select:focus {
+    outline: none;
+}
+p{
+    margin: 0px;
+}
+
+.line {
+    min-width: 80vw;
+    opacity: 0.1;
+    border: solid 0.1px white;
+    opacity: 0.5;
+}
+
+.countBox {
+    width: 25vw;
+    min-width: 140px;
+    height: 18vh;
+    padding: 5px 5px 5px 5px;
+    margin-top: 30px;
+    margin-right: 6vw;
+    margin-left: 5vw;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #393c49;
+}
+
+
+input {
+    width: 10vw;
+    height: 150px;
+    min-width: 30px;
+    margin-bottom: 20px;
+    margin-left: 7vw;
+    padding: 0px;
+    border: solid 0.5px #707070;
+    min-width: 150px;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%
+}
+
+.capsule {
+    width: 15px;
+    height: 80px;
+    background-image: linear-gradient(to bottom, #d7816a, #bd4f6c);
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+.example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 10px;
+}
+
+.example-margin {
+    border-radius: 10px;
+    transform: rotate(0deg);
+    text-align: left;
+    margin-top: 15px;
+    width: 15vw;
+    min-width: 130px;
+    height: 20px;
+    color: white;
+    /* overflow: hidden; */
+}
+
+::ng-deep .mat-progress-bar {
+    height: 10px;
+}
+
+::ng-deep .mat-progress-bar-fill::after {
+    background-image: linear-gradient(to right, #d7816a, #bd4f6c);
+    border-radius: 10px;
+}
+
+::ng-deep .mat-progress-bar-buffer {
+    background: #2f3340;
+    border-radius: 5px;
+}
+::ng-deep .mat-tab-label-active {
+    font-weight: bolder;
+    color: green !important;
+    font-style: calibri;
+    height: 33px;
+    font-size: 15px !important;
+  }
+  
+  ::ng-deep .mat-tab-label-content {
+    font-size: 15px !important;
+    font-style: calibri;
+    font-weight: bolder;
+  }
+  
+  mat-tab-group {
+    padding: 10px;
+    font-size: 25px !important;
+    background-position-y: fixed;
+    font-style: calibri;
+  }
+  
+  /* ink bar */
+  
+  ::ng-deep .mat-ink-bar {
+    background-color: var(--primary-color, #43A37E) !important;
+    height: 5px!important;
+  }
+  
+  .field-group {
+    height: 8vh;
+    display: flex;
+    /*  */
+    /* justify-content: space-around; */
+    /*  */
+    align-items: center;
+    font-size: 15px;
+    font-family: calibri;
+    color:#ffffff;
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+  
+  .width-150 {
+    width: 70px;
+    min-width:20px;
+    margin-left: 15px;
+    border-radius: 40px;
+    background-color: transparent;
+    color: white;
+    }
+  
+  .width-250 {
+    width: 5vw;
+    height: 30px;
+    margin-left: 0px;
+    min-width: 130px;
+    font-size: small;
+  }
+  
+  .mat-radio-button {
+    font-size: 15px;
+    padding: 13px 0px 0px 19px;
+  }
+  
+  .time {
+    margin: 10px 0px 10px 0px;
+    font-size: 15px;
+    font-weight: bolder;
+    width: 50px;
+    height: 30px;
+    border-radius: 10px;
+    min-width: 80px;
+  }
+  
+  mat-checkbox ::ng-deep .mat-checkbox-inner-container {
+    width: 32px;
+    height: 32px;
+  }
+  
+  mat-checkbox {
+    padding: 15px 0px 0px 43px;
+  }
+  
+  input {
+    width: 10px;
+    height: 30px;
+    /* font-size: 35px; */
+    }
+  input[type=checkbox]{
+    width: 20px;
+    height: 20px;
+    font-size: 35px;
+    border-radius: 10px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+  }
+  @keyframes spinner {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .spinner:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    border-top-color: #000000;
+    animation: spinner .8s linear infinite;
+  }
+  .label{
+      color: #ffffff;
+  }
+  .time{
+    width: 30px;
+    /* color: #ffffff; */
+    /* padding-left: 2px; */
+  }
+  

@@ -1,0 +1,48 @@
+<!-- <p style="color: white;">write-review works!</p> -->
+<div style="color: white;">
+    <ngx-spinner type="ball-spin-fade-rotating" size="medium" ></ngx-spinner>
+    <div class="header">
+      <div>
+        Add review
+      </div>
+      <div class="Line-1"></div>
+    </div>
+    <form  [formGroup]="reviewForm" (ngSubmit)="review()">
+      <div style="width: 100%; float: left;">
+        <div>
+          <div style="float: left; margin-right: 15vw;">
+            <div style="text-align: left;">
+              <label>Saloon shop Name</label>
+              </div>
+            <div style="padding-top: 10px;">
+              <input class="mat" formControlName="saloonname" value="name" type="text" placeholder="Type Here...">
+            </div>
+          </div>
+        </div>
+        <div style="float: left;">
+          <div style="text-align: left;">
+            <label >Review</label>
+            </div>
+          <div style="margin-top: 10px;">
+            <textarea  name="description" formControlName="review"  placeholder="Type Here..."></textarea>
+          </div>
+        </div>
+      </div>
+      <div style="width: 100%;text-align: center;">
+        <Button  *ngIf = "action == 'add'"  type="submit" class="addBtn"
+          style="cursor: pointer; width: 9vw;  height: 50px; min-width:80px;min-height: 40px;margin-right: 2vw; background-color: #ea7c69; color: white;border: none;border-radius: 5px;">
+          Add
+        </Button>
+        <Button *ngIf = "action != 'add'" type="submit" class="addBtn"
+            style="cursor: pointer; width: 9vw;  height: 50px; min-width:80px;min-height: 40px;margin-right: 2vw; background-color: #ea7c69; color: white;border: none;border-radius: 5px;">
+            Save
+          </Button>
+        
+        <Button class="cancelBtn"
+          style="cursor: pointer;width: 9vw; min-width:80px; min-height: 40px;  height: 50px; margin-top: 40px;  margin-left: 2vw;border: solid 0.5px #ea7c69;border-radius: 5px; background-color: transparent; color:#ea7c69 ;"
+          (click)="cancel()">
+          Cancel
+        </Button>
+      </div>
+    </form>
+  </div>

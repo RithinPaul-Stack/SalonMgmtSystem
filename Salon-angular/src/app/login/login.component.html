@@ -1,0 +1,55 @@
+<div >
+<ngx-spinner type="ball-spin-fade-rotating" size="medium"></ngx-spinner>
+   <div class="loginFormBG" >
+        <div id="logo" style="width: 40%; height: 30%; float: left;">
+            <img src="assets/saloonicon.png" style="width: 80%; height: 80%;margin-top: 5px;margin-left: 11vw;" alt="logo">
+        </div>
+
+        <div style="width: 80%; min-width: 250px; margin: 10px auto; text-align: left;">
+
+            <div >
+                <form [formGroup]="loginForm" (ngSubmit)="login()">
+                    <!-- [formGroup]="loginForm" (ngSubmit)="login()" -->
+                <div style="margin-top: 5vh;">
+                   </div>
+                <div style="  text-align: center; border-radius: 10px ">
+                    <div style="margin-top: 10px;">
+                        <div style="margin-left: 0px;
+                        margin-right: 19vw;margin-bottom: 10px;
+                        width: 90px;text-align: left;">
+                            <label >
+                                Login as
+                            </label>
+                        </div>
+                        
+                        <input style="padding-left: 10px;background-color: #2d303e;width: 95%;
+                         color: white;height: 50px;border-radius: 10px;" 
+                        id="role" formControlName="email" name="role" placeholder="owner" #role>
+                            <!-- <option value="owner">owner</option> -->
+                            <!-- <option value="customer">customer</option> -->
+                    </div>
+                </div>
+                <div style="margin-top: 10px;">
+                    <label>
+                        Password
+                    </label>
+                    <input style="margin-top: 10px;" type="password" formControlName="password" placeholder="*********">
+                </div>
+                <div  style="color:#c6c6c6;margin-top: 10px;cursor: pointer; " href="#">Forgot password?</div>
+                <button  style="margin-top: 10vh;min-width:80px;width:8vw;" type="submit" class="loginBtn">
+                    Login
+                </button>
+                <button  style="margin-left: 70px;margin-top: 10vh;min-width:80px;width:8vw;background-color: rgb(116, 156, 116);" (click)='signup("add")' class="loginBtn">
+                     SignUp
+                </button>
+            </form>
+            </div>
+
+            
+            
+        </div>
+
+
+    </div>
+</div>
+

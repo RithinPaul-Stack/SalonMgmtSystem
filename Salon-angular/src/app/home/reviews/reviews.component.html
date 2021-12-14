@@ -1,0 +1,103 @@
+<div>
+    <ngx-spinner type="ball-spin-fade-rotating" size="medium"></ngx-spinner>
+    <div style="align-content: space-between;">
+        <div id="HASH">
+            <div class="title">View Reviews</div>
+        </div>
+    </div>
+    <div style="padding-top: 30px;">
+        <table style="width: 70vw; min-width: 650px;">
+            <tr class="last" style="text-align: left;">
+
+                <th scope="col" style="text-align: left;">
+                    <div style="width: 10vw;float: left;">
+                        <div style="color: tomato;opacity: 0.8;">
+                            sowmya
+                        </div>
+                       </div> 
+                    <span style="font-weight: lighter;opacity: 0.5;font-size: small;">6 months ago</span>
+                    <div>
+                        <p style="font-weight: lighter;">Thank you so much for everything you do 
+                            – you're a truly talented stylist and I always enjoy my appointments. 
+                            Please accept this gift card and get yourself some well deserved coffees on me. 
+                            I'm already looking forward to my next appointment.</p>
+                    </div>
+                </th> 
+                </tr>
+            <tr>
+                <th scope="col" style="text-align: left;">
+                    <div style="width: 10vw;float: left;">
+                        <div style="color: tomato;opacity: 0.8;">
+                            vishnu
+                        </div>
+                       </div> 
+                    <span style="font-weight: lighter;opacity: 0.5;font-size: small;">8 months ago</span>
+                    <!-- 6 months ago -->
+                    <div>
+                        <p style="font-weight: lighter;">Thank you so much for everything you do 
+                            – you're a truly talented stylist and I always enjoy my appointments. 
+                            </p>
+                    </div>
+                </th>
+            </tr>
+            <ng-container *ngFor='let employee of sortedReviews'>
+                <tr style="text-align: center; font-weight: lighter; ">
+                    <td>{{employee?.username | titlecase}}</td>
+                    <td>{{employee?.name | titlecase}}</td>
+                    <td>{{employee?.mobile}}</td>
+                    <td>{{employee?.role | titlecase}}</td>
+                    <td>
+                        <div style="cursor: pointer;color: #ea7c69;">
+                            <u>View Employee Details</u>
+                        </div>
+                    </td>
+                    <td>{{employee.store_name?.name | titlecase}}</td>
+                    <td>
+                        <div>
+                            <img src="{{employee.photo}}" onerror="this.onerror=null; this.src='assets/s-users@2x.png'" width="80px" height="80px" style="object-fit:contain;">
+                        </div>
+                    </td>
+                    <td>
+                        <div *ngIf="employee.Login != null">
+                            {{employee?.Login}}
+                        </div>
+                        <div style="text-align: center;" *ngIf="employee.Login == null">
+                            NA
+                        </div>
+                    </td>
+                    <td>
+                        <div *ngIf="employee.Logout != null">
+                            {{employee?.Logout}}
+                        </div>
+                        <div style="text-align: center;" *ngIf="employee.Logout == null">
+                            NA
+                        </div>
+                    </td>
+                    <td>
+                        <tr class="none">
+                            <td style="width: 5vw;">
+                                <div>
+                                    <div class="material-icons" style=" cursor: pointer; float: right ;color: #46be8a;">
+                                        edit
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="width: 20px;">
+                                <div>
+                                    <div class="material-icons" style=" cursor: pointer; float: right ;color: #dd0934;">
+                                        delete
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </td>
+                </tr>
+            </ng-container>
+        </table>
+    </div>
+    <!-- <div style="text-align: right; bottom: 30px; right: 20px;color: white;">
+        <pagination-controls class="current" previousLabel="<" nextLabel=">" screenReaderPaginationLabel="Pagination" screenReaderPageLabel="page" screenReaderCurrentLabel="You're on page" (pageChange)="currentPage = $event">
+        </pagination-controls>
+    </div> -->
+</div>
+
